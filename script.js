@@ -25,10 +25,28 @@ function writePassword() {
       lengthChoice = prompt("Select Password Length, between 8 and 128 characters");
       //convert any string to numbers
     }
+    //choice two, lowercase
+    var lowerCase = prompt("Do you want Lowercase Letters? (Y)es, (N)o");
+    lowerCase = lowerCase.toLowerCase();
+    //validate choice and convert anything to boolean
+    while (lowerCase != "yes" || lowerCase != "no") {
+      if (lowerCase == "yes" || lowerCase == "no") {
+        break;
+      }else if (lowerCase == "y" || lowerCase == "n") {
+        break;
+      }
+      alert("Must choose (Y)es or (N)o");
+      lowerCase = prompt("Do you want Lowercase Letters? (Y)es, (N)o");
+      lowerCase = lowerCase.toLowerCase();
+    }
+    //convert to boolean
+    if (lowerCase == "y" || lowerCase == "yes") {
+      lowerCase = true;
+    }else {
+      lowerCase = false;
+    }
   }
 
-  //choice two, lowercase
-  //validate choice two selection
 
   //choice three, uppercase
   //validate choice three selection
