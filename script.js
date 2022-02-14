@@ -25,6 +25,7 @@ function writePassword() {
       lengthChoice = prompt("Select Password Length, between 8 and 128 characters");
       //convert any string to numbers
     }
+    console.log(lengthChoice);
     //choice two, lowercase
     var lowerCase = prompt("Do you want Lowercase Letters? (Y)es, (N)o");
     lowerCase = lowerCase.toLowerCase();
@@ -45,10 +46,13 @@ function writePassword() {
     }else {
       lowerCase = false;
     }
+    console.log(lowerCase);
+
+    //choice three, uppercase
+    
   }
 
 
-  //choice three, uppercase
   //validate choice three selection
 
   //choice four, numbers
