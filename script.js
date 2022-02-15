@@ -49,16 +49,53 @@ function writePassword() {
     console.log(lowerCase);
 
     //choice three, uppercase
+    var upperCase = prompt("Do you want Uppercase Letters? (Y)es, (N)o");
+    upperCase = upperCase.toLowerCase();
+    //validate choice and convert anything to boolean
+    while (upperCase != "yes" || upperCase != "no") {
+      if (upperCase == "yes" || upperCase == "no") {
+        break;
+      }else if (upperCase == "y" || upperCase == "n") {
+        break;
+      }
+      alert("Must choose (Y)es or (N)o");
+      upperCase = prompt("Do you want Uppercase Letters? (Y)es, (N)o");
+      upperCase = upperCase.toLowerCase();
+    }
+    //convert to boolean
+    if (upperCase == "y" || upperCase == "yes") {
+      upperCase = true;
+    }else {
+      upperCase = false;
+    }
+    console.log(upperCase);
     
+    //choice four, numbers
+    var numb = prompt("Do you want Numbers? (Y)es, (N)o");
+    numb = numb.toLowerCase();
+    //validate choice and convert anything to boolean
+    while (numb != "yes" || numb != "no") {
+      if (numb == "yes" ||  numb == "no") {
+        break;
+      }else if (numb == "y" || numb == "n") {
+        break;
+      }
+      alert("Must choose (Y)es or (N)o");
+      numb = prompt("Do you want Numbers? (Y)es, (N)o");
+      numb = numb.toLowerCase();
+    }
+    //convert to boolean
+    if (numb == "y" || numb  == "yes") {
+        numb = true;
+    }else {
+      numb = false;
+    }
+    console.log(numb);
+    
+    //choice five, special characters: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
   }
 
-
-  //validate choice three selection
-
-  //choice four, numbers
-  //validate choice four selection
-
-  //choice five, special characters: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
   //validate choice five selection
 
   //generate random password based off of selected criteria
