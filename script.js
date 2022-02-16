@@ -18,7 +18,17 @@ generateBtn.addEventListener("click", writePassword);
 
 //create generatePassword function
 function generatePassword() {
-  function passwordCriteria(){
+  var numb = false;
+  var specialchar = false;
+  var upperCase = false;
+  var lowerCase = false;
+  var selections = 0;
+  var lowerLet = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`];
+  var upperLet = [`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`, `T`, `U`, `V`, `W`, `X`, `Y`, `Z`];
+  var numbs = [`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`];
+  var characters = [`!`, `"`, `#`, `$`, `%`, `&`, `'`, `(`, `)`, `*`, `+`, `,`, `-`, `.`, `/`, `:`, `;`, `<`, `=`, `>`, `?`, `@`, `[`, '\\', `]`, `^`, `_`, '`', `{`, `|`, `}`, `~`];
+  console.log(characters[23]);
+  while (numb == false && specialchar == false && upperCase == false && lowerCase == false) {
     //prompts set up password criteria
     var proceed = confirm("Do you want to generate a Password");
     console.log(proceed);
@@ -127,14 +137,61 @@ function generatePassword() {
       specialchar = false;
     }
     console.log(specialchar);
-  }
 
-  if (numb == false && specialchar == false && upperCase == false && lowerCase == false) {
-    alert("You have at least one selection")
-    passwordCriteria();
+    if (numb == false && specialchar == false && upperCase == false && lowerCase == false) {
+      alert("You must have at least one selection");
+      //reask questions if all answers are no      
+    }
   }
-  //reask questions if all answers are no
   //arays for choices to pull from for final password
+  //creating empty array to fill with criteria
+  var passwordLength = Number(lengthChoice);
+  console.log(passwordLength);
+  var passwordEL = new Array(passwordLength);
+  console.log(passwordEL);
+  //creating length and empty array for selections
+  if (lowerCase == true) {
+    selections++;
+  }
+  console.log(selections);
+  if (upperCase == true) {
+    selections++;
+  }
+  console.log(selections);
+  if (numb == true) {
+    selections++;
+  }
+  console.log(selections);
+  if (specialchar == true) {
+    selections++;
+  }
+  console.log(selections);
+  var selectionLength = Number(selections);
+  console.log(selectionLength);
+
+  var selectionAr = new Array(selectionLength);
+
+  if (lowerCase == true) {
+    selectionAr = selectionAr.concat(lowerLet);
+  }
+  selectionAr = selectionAr.filter((a) => a);
+  console.log(selectionAr);
+  if (upperCase == true) {
+    selectionAr = selectionAr.concat(upperLet);
+  }
+  selectionAr = selectionAr.filter((a) => a);
+  console.log(selectionAr);
+  if (numb == true) {
+    selectionAr = selectionAr.concat(numbs);
+  }
+  selectionAr = selectionAr.filter((a) => a);
+  console.log(selectionAr);
+  if (specialchar == true) {
+    selectionAr = selectionAr.concat(characters);
+  }
+  selectionAr = selectionAr.filter((a) => a);
+  console.log(selectionAr);
+
   //numbers, letters upper, letters lower, spectial characters
   //select random part of each selection array with math.random
   //add to Password array based off true values upto specified length
