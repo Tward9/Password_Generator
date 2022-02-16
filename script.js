@@ -8,7 +8,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -203,6 +202,8 @@ function generatePassword() {
   var password = passwordEL.join('');
   console.log(password);
   //display password in box or alert
+  //how to get password result from here to display box
+
 }
 
 
