@@ -111,6 +111,9 @@ function generatePassword() {
   //reask questions if all answers are no
   //arays for choices to pull from for final password
   //numbers, letters upper, letters lower, spectial characters
+  //select random part of each selection array with math.random
+  //add to Password array based off true values upto specified length
+  //set each index to random pick of array options
   //generate random password based off of selected criteria
 
   //display password in box or alert
