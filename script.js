@@ -192,12 +192,16 @@ function generatePassword() {
   selectionAr = selectionAr.filter((a) => a);
   console.log(selectionAr);
 
-  //numbers, letters upper, letters lower, spectial characters
   //select random part of each selection array with math.random
   //add to Password array based off true values upto specified length
   //set each index to random pick of array options
   //generate random password based off of selected criteria
-
+  for(i = 0; i<passwordLength; i++){
+    passwordEL[i] = selectionAr[Math.floor(Math.random() * selectionAr.length)];
+    console.log(passwordEL);
+  }
+  var password = passwordEL.join('');
+  console.log(password);
   //display password in box or alert
 }
 
