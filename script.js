@@ -109,6 +109,8 @@ function generatePassword() {
 
   //validate choice five selection
   //reask questions if all answers are no
+  //arays for choices to pull from for final password
+  //numbers, letters upper, letters lower, spectial characters
   //generate random password based off of selected criteria
 
   //display password in box or alert
