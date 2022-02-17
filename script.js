@@ -203,7 +203,5 @@ function generatePassword() {
   console.log(password);
   //display password in box or alert
   //how to get password result from here to display box
-
 }
-
 
